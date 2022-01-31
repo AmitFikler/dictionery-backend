@@ -4,4 +4,4 @@ const { randomPartOfSpeech } = require('../controllers/partOfSpeech');
 
 router.get('/:part', randomPartOfSpeech);
 
-module.exports = router;
+module.exports.partOfSpeechRouter = router;

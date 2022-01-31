@@ -1,5 +1,9 @@
 const { PART_OF_SPEECH_DICT } = require('../helpers/partOfSpeech');
-const dynamoDB = require('../helpers/dynamodb');
+const AWS = require('aws-sdk');
+
+const dynamoDB = new AWS.DynamoDB.DocumentClient({
+  region: 'us-east-1',
+});
 
 exports.randomPartOfSpeech = async (req, res) => {
   const { part } = req.params;

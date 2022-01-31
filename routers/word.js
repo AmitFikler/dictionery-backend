@@ -6,4 +6,4 @@ router.get('/:word', findWord);
 
 router.get('/:word/:partOfSpeech', findWordWithPos);
 
-module.exports = router;
+module.exports.wordsRouter = router;
