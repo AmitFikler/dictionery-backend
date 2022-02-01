@@ -8,8 +8,6 @@ In the end, I uploaded everything with serverless to AWS and the client side tur
 
 ## Route `/word`
 
----
-
 <br>
 
 ### GET `/:word` - returns all definition of this word.
@@ -25,8 +23,6 @@ will return a word + definition + part of speech
 ![alt text](https://i.ibb.co/1TQ5q4L/find-Word-With-Pos.png)
 
 ## Route `/part-of-speech`
-
----
 
 <br>
 
