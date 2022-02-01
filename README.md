@@ -13,6 +13,7 @@ In the end, I uploaded everything with serverless to AWS and the client side tur
 if word has more than one parts of speech will return all words part of speech, else, will return a word + definition + part of speech.
 
 ![alt text](https://i.ibb.co/QXQXChM/findWord.png)
+<br>
 `/word/welcome`
 ![alt text](https://i.ibb.co/Df5MvYp/get-word.png)
 
@@ -21,6 +22,7 @@ if word has more than one parts of speech will return all words part of speech, 
 will return a word + definition + part of speech
 
 ![alt text](https://i.ibb.co/1TQ5q4L/find-Word-With-Pos.png)
+<br>
 `/word/welcome/verbs`
 ![alt text](https://i.ibb.co/zR3Cwqt/get-word-pos.png)
 
@@ -31,5 +33,6 @@ will return a word + definition + part of speech
 returns a random word + definition + part of speech (option to receive by letters).
 
 ![alt text](https://i.ibb.co/pR1BZz5/random-Part.png)
+<br>
 `/part-of-speech/verbs`
 ![alt text](https://i.ibb.co/MBSN4m7/pos.png)
