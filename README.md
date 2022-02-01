@@ -13,6 +13,7 @@ In the end, I uploaded everything with serverless to AWS and the client side tur
 if word has more than one parts of speech will return all words part of speech, else, will return a word + definition + part of speech.
 
 ![alt text](https://i.ibb.co/QXQXChM/findWord.png)
+`/word/welcome`
 ![alt text](https://i.ibb.co/Df5MvYp/get-word.png)
 
 ### 🖇 GET `/:word/:partOfSpeech` - returns the meaning of the word and it's part of speech.
@@ -20,6 +21,7 @@ if word has more than one parts of speech will return all words part of speech, 
 will return a word + definition + part of speech
 
 ![alt text](https://i.ibb.co/1TQ5q4L/find-Word-With-Pos.png)
+`/word/welcome/verbs`
 ![alt text](https://i.ibb.co/zR3Cwqt/get-word-pos.png)
 
 ## 🔗 Route `/part-of-speech`
@@ -29,4 +31,5 @@ will return a word + definition + part of speech
 returns a random word + definition + part of speech (option to receive by letters).
 
 ![alt text](https://i.ibb.co/pR1BZz5/random-Part.png)
+`/part-of-speech/verbs`
 ![alt text](https://i.ibb.co/MBSN4m7/pos.png)
