@@ -17,7 +17,7 @@ exports.randomPartOfSpeech = async (req, res) => {
     },
     ExpressionAttributeValues: {
       ':pos': PART_OF_SPEECH_DICT[part.toLowerCase()],
-      ':word': letter ? letter.toUpperCase() : '',
+      ':word': letter ? letter.toUpperCase() : '', // If the user did not enter a letter
     },
   };
   try {

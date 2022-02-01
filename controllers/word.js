@@ -6,8 +6,7 @@ const dynamoDB = new AWS.DynamoDB.DocumentClient({
 });
 
 exports.findWord = async (req, res) => {
-  console.log('in find word');
-  const { word } = req.params;
+  const { word } = req.params; // find word
   const params = {
     TableName: 'english-dict',
     KeyConditionExpression: '#word = :word',
@@ -15,23 +14,22 @@ exports.findWord = async (req, res) => {
       '#word': 'word',
     },
     ExpressionAttributeValues: {
-      ':word': word.toUpperCase(),
+      ':word': word.toUpperCase(), // The letters in the database are in capital letters
     },
   };
   try {
-    const words = await dynamoDB.query(params).promise();
-    console.log(words);
-    res.send(words.Items);
+    const wordsFromDB = await dynamoDB.query(params).promise(); // find words in dynamoDB
+    res.json(wordsFromDB.Items);
   } catch (error) {
     res.json(error);
   }
 };
 
 exports.findWordWithPos = async (req, res) => {
-  const { word, partOfSpeech } = req.params;
+  const { word, partOfSpeech } = req.params; // find word and part-of-speech
   const params = {
     TableName: 'english-dict',
-    KeyConditionExpression: '#word = :word AND #pos = :pos',
+    KeyConditionExpression: '#word = :word AND #pos = :pos', // find word by name AND pos
     ExpressionAttributeNames: {
       '#word': 'word',
       '#pos': 'pos',
@@ -42,8 +40,8 @@ exports.findWordWithPos = async (req, res) => {
     },
   };
   try {
-    const words = await dynamoDB.query(params).promise();
-    res.send(words.Items);
+    const wordsFromDB = await dynamoDB.query(params).promise(); // find words in dynamoDB
+    res.send(wordsFromDB.Items);
   } catch (error) {
     res.send(error);
   }
