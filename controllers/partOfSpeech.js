@@ -25,6 +25,6 @@ exports.randomPartOfSpeech = async (req, res) => {
     const RANDOM_INDEX = Math.floor(Math.random() * words.Items.length); // get random index
     res.send(words.Items[RANDOM_INDEX]); // send random word
   } catch (error) {
-    res.json(error);
+    res.sendStatus(404);
   }
 };
