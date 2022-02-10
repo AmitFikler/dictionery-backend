@@ -21,7 +21,7 @@ exports.findWord = async (req, res) => {
     const wordsFromDB = await dynamoDB.query(params).promise(); // find words in dynamoDB
     res.json(wordsFromDB.Items);
   } catch (error) {
-    res.sendStatus(404);
+    res.status(404).send({ error: 'Word not found' });
   }
 };
 
@@ -43,6 +43,6 @@ exports.findWordWithPos = async (req, res) => {
     const wordsFromDB = await dynamoDB.query(params).promise(); // find words in dynamoDB
     res.send(wordsFromDB.Items);
   } catch (error) {
-    res.sendStatus(404);
+    res.status(404).send({ error: 'Word not found' });
   }
 };
